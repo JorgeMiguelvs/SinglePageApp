@@ -1,8 +1,15 @@
+import { AppBar } from "@mui/material";
+
 function App() {
   return (
-    <div>
+    <>
+     <AppBar>Clique Aqui</AppBar>
+      
       <h1>Hello World</h1>
-    </div>
+      <h1>Hello World</h1>
+      <h1>Hello World</h1>
+
+    </>
   );
 }
 
