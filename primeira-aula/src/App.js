@@ -1,15 +1,14 @@
-import { AppBar } from "@mui/material";
+import AppBar from "./components/AppBar/AppBar";
 
 function App() {
   return (
-    <>
-     <AppBar>Clique Aqui</AppBar>
-      
-      <h1>Hello World</h1>
-      <h1>Hello World</h1>
-      <h1>Hello World</h1>
+    <div>
 
-    </>
+      <h2>Clique no Botão</h2>
+      <AppBar />
+      <br></br>
+      
+    </div>
   );
 }
 

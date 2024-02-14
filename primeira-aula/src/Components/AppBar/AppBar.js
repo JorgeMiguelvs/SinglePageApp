@@ -1,12 +1,12 @@
 import { Button } from "@mui/material";
 
-function AppBar(){
-    return (
-        <>
-        <Button>Clique Aqui</Button>
-        </>
-    );
-    
-}
+export default function AppBar() {
 
-export default AppBar;
+  return (
+    <>
+      <Button>
+        Button
+      </Button>
+    </>
+  );
+} 
