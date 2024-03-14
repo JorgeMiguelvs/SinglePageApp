@@ -1,28 +1,35 @@
+import { useEffect, useState } from "react";
+import "./styles.css";
 
-
-const { useEffect } = require("react");
-const { useState } = require("react")
-
-const maisBuscados=()=>{
-
-    //gerenciador de estados (useState)
-       //variavel, função
-    const [livros,setLivros] = useState([]);
-
-    //efeitos colaterais
-    useEffect(()=>{
-        const buscarLivros = async ()=>{
-            try {
-                const resposta = fetch('http://localhost:4000/livros');
-                const dados = await resposta.json();
-                setLivros(dados);
-            } catch (error) {
-                console.error(error);
-            }
+const MaisBuscados = () => {
+    const [livros, setLivros] = useState([]);
+  
+    useEffect(() => {
+      const buscarLivros = async () => {
+        try {
+          const resposta = await fetch("http://localhost:8080/livros");
+          const dados = await resposta.json();
+          console.log(dados);
+          setLivros(dados);
+        } catch (error) {
+          console.error(error);
         }
-    },[])
-
-    return{
-
-    }
-}
+      };
+      buscarLivros();
+    }, []);
+  
+    return (
+      <div className="card-container">
+        {livros.map((livro, index) => (
+          <div className="card" key={index}>
+            <h1>{livro.titulo}</h1>
+            <h1>{livro.autor}</h1>
+            <img src={livro.imagem} alt={livro.titulo} />
+            <h1>{livro.preco}</h1>
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+  export default MaisBuscados;

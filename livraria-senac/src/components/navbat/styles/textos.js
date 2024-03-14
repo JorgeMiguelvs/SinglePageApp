@@ -9,7 +9,4 @@ export const Titulo = styled.h1` //só posso yusar ele em outro arquivo se expor
     line-weight:1.5rem;
         
 `;
-
-
-
 //props passar valor pro meu componente
