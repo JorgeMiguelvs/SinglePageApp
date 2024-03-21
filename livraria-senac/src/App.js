@@ -2,7 +2,7 @@
 import './App.css';
 import MaisBuscados from './components/maisBuscados/maisBuscados';
 import MenuBar from './components/navbar/Menu';
-import { Titulo } from './components/navbat/styles/textos';
+import Pesquisa from './components/pesquisa/pesquisa';
 
 
 
@@ -12,8 +12,9 @@ function App() {
     <div className="App">
       <MenuBar />
       <header className="App-header">
-        <MaisBuscados/>
+      <Pesquisa/>
       </header>
+      <MaisBuscados/>
     </div>
   );
 }

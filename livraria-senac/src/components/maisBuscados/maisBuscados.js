@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./styles.css";
+import "./stylesCard.css";
 
 const MaisBuscados = () => {
     const [livros, setLivros] = useState([]);
