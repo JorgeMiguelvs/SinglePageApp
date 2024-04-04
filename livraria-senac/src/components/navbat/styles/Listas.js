@@ -9,5 +9,6 @@ export const Lista = styled.ul`
 export const Item = styled.li`
     list-style-type:none;
     padding:15px;
+    text-decoration:none; 
 
 `;

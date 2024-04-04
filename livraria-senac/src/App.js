@@ -1,22 +1,38 @@
 
+import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import MaisBuscados from './components/maisBuscados/maisBuscados';
 import MenuBar from './components/navbar/Menu';
 import Pesquisa from './components/pesquisa/pesquisa';
-
-
-
+import Cadastro from './components/cadastro/cadastro';
+import Login from './components/login/login';
 
 function App() {
   return (
     <div className="App">
       <MenuBar />
-      <header className="App-header">
-      <Pesquisa/>
-      </header>
-      <MaisBuscados/>
+      <Routes>
+        <Route path ='/' element={
+          <>
+            <header className="App-header">
+            <Pesquisa/>
+            </header>
+            <MaisBuscados/>
+          </>
+        }/>
+        <Route path='/cadastro' element={
+          
+            <Cadastro/>
+          
+        }/>
+        <Route path='/login' element={
+          <Login/>
+        }/>
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
