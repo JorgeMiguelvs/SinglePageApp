@@ -20,7 +20,7 @@ app.post('/addUser',(req,res)=>{
 
     if (name && password){
 
-        userService.addUser(name,password);
+        usersServices.addUser(name,password);
         res.status(200).send("User Add")
         
     }
@@ -50,5 +50,5 @@ app.get('/buscarLivrosPorTitulo/:titulo', (req, res)=>{
 
 });
 
-app.listen(8080)
+app.listen(3000)
 
