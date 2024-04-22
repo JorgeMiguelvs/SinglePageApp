@@ -50,5 +50,19 @@ app.get('/buscarLivrosPorTitulo/:titulo', (req, res)=>{
 
 });
 
-app.listen(3000)
+//rota de login
+app.post('/login',async (req,res)=>{
+    //estração das variaveis que estão sendo passadas
+    const {name,password}=req.body;
+
+    const resul = await userService.validadeLogin(name,password);
+
+    if(resul){
+        res.status(200).json('ok')
+    }else{
+        res.status(401).json('Dados')
+    }
+})
+
+app.listen(8080)
 
