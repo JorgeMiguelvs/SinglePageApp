@@ -1,4 +1,4 @@
-POST http://localhost:3000/login
+POST http://localhost:3000/cadastro
 content-Type: application/json
 
 
@@ -8,4 +8,3 @@ content-Type: application/json
 
     }
 
-    //rest client 

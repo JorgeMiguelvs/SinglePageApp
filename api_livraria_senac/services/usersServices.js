@@ -11,7 +11,23 @@ exports.addUser = (name,password)=>{
     users.push(novoUsuario);
     //escrevemos essa nova lsita no json
     fs.writeFileSync('users.json',JSON.stringify(users),'utf-8');
+
 }
+
+
+// app.post('/cadastro', (req,res)=>{
+//     const {name,password} = req.body;
+
+//     if (name && password) {
+
+//         userService.addUser(name,password);
+//         res.status(200).send("User add")
+        
+//     } else {
+//         res.status(400).send("Dados invalidos")
+//     }
+// })
+
 
 exports.validadeLogin = (name,password) =>{
     
