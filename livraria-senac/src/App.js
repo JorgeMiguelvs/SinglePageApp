@@ -7,6 +7,7 @@ import MenuBar from './components/navbar/Menu';
 import Pesquisa from './components/pesquisa/pesquisa';
 import Cadastro from './components/cadastro/cadastro';
 import Login from './components/login/login';
+import Home from './components/home/home';
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
             <MaisBuscados/>
           </>
         }/>
-        <Route path='/cadastro' element={
+        <Route path='/home' element={
           
-            <Cadastro/>
+            <Home/>
           
         }/>
         <Route path='/login' element={

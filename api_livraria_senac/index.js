@@ -44,7 +44,7 @@ app.post('/login',async (req,res)=>{
     const resul = await usersServices.validadeLogin(name,password);
 
     if(resul){
-        res.status(200).json('ok')
+        res.status(200).json({sucess: true})
     }else{
         res.status(401).json('Dados')
     }
