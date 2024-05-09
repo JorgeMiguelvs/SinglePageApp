@@ -14,7 +14,7 @@ setFormData (prevState => ({...prevState,[name]: value}))
 const handleSubmit = async (e) =>{
   e.preventDefault(); //prevenir comportamentos padrões do formulário
   try {
-    const response = await fetch('http://localhost:8080/addUser',{
+    const response = await fetch('http://localhost:8080/cadastro',{
       method:'POST',
       headers:{
         'Content-Type': 'application/json'

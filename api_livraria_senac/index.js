@@ -41,7 +41,7 @@ app.post('/login',async (req,res)=>{
     //estração das variaveis que estão sendo passadas
     const {name,password}=req.body;
 
-    const resul = await userService.validadeLogin(name,password);
+    const resul = await usersServices.validadeLogin(name,password);
 
     if(resul){
         res.status(200).json('ok')

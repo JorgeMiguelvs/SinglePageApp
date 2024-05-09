@@ -14,21 +14,6 @@ exports.addUser = (name,password)=>{
 
 }
 
-
-// app.post('/cadastro', (req,res)=>{
-//     const {name,password} = req.body;
-
-//     if (name && password) {
-
-//         userService.addUser(name,password);
-//         res.status(200).send("User add")
-        
-//     } else {
-//         res.status(400).send("Dados invalidos")
-//     }
-// })
-
-
 exports.validadeLogin = (name,password) =>{
     
     try {
